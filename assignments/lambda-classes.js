@@ -44,3 +44,17 @@ class Student extends Instructor{
         return `${student.name} has begun sprint challenge on ${subject}`
     }
 }
+
+class TeamLeads extends Student{
+    constructor(pm){
+        super(pm);
+        this.gradClassName = pm.gradClassName,
+        this.favInstructor = pm.favInstructor
+    }
+    standUp(channel){
+        return `${this.name} announces to ${channel}, @channel standy times!​​​​​`;
+    }
+    debugsCode(student, subject){
+        return `${this.name} debugs ${student.name}'s code on ${subject}`;
+    }
+}
