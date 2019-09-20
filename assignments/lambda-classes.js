@@ -6,6 +6,21 @@ class Person{
         this.location = info.location
     }
     speak(){
-        `Hello my name is ${this.name} and I am from ${this.location}`;
+        return `Hello my name is ${this.name} and I am from ${this.location}`;
+    }
+}
+
+class Instructor extends Person {
+    constructor(aboutIns){
+        super(aboutIns);
+        this.specialty = aboutIns.specialty,
+        this.favLanguage = aboutIns.favLanguage,
+        this.catchPhrase = aboutIns.catchPhrase
+    }
+    demo(subject){
+        return `Today we are learning about ${subject}.`;
+    }
+    grade(student, subject){
+        return `${student.name} receives a perfect score on ${subject}`;
     }
 }
