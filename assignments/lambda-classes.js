@@ -1,4 +1,6 @@
 // CODE here for your Lambda Classes
+
+
 class Person{
     constructor(info){
         this.name = info.name,
@@ -25,6 +27,7 @@ class Instructor extends Person {
     }
 }
 
+`use strict`; /// Did not Work
 class Student extends Instructor{
     constructor(pupil){
         super(pupil);
@@ -32,15 +35,15 @@ class Student extends Instructor{
         this.className = pupil.className,
         this.favSubjects = pupil.favSubjects
     }
-    listSubject(){
-       this.favSubjects.foreach(function(subject){
-        console.log(subject);
-       })
+    listSubjects() {
+        this.favSubjects.forEach(function(subject) {
+          console.log(subject);
+        });
     }
-    PRAssignment(subject){
+    PRAssignment(student, subject){
         return `${student.name} receives a perfect score on ${subject}.`;
     }
-    sprintChallenge(subject){
+    sprintChallenge(student, subject){
         return `${student.name} has begun sprint challenge on ${subject}`
     }
 }
@@ -122,3 +125,14 @@ const darkLord = new Instructor({
     gradClassName: "We don't need no education",
     favInstructor: "life"
   });
+  
+  ///////////////
+console.log(prettyFlyForATLGuy.standUp("JavaScript Ninjas")); //Will VanOrder announces to JavaScript Ninjas, @channel standy times!​​​​​
+console.log(prettyFlyForATLGuy.catchPhrase); //Let’s git’r done
+console.log(awesome.speak()); //Hello my name is Brittany, I am from Louisville.
+console.log(yoda.demo("Jedi mind tricks")); //Today we are learning about Jedi mind tricks.
+console.log(darkLord.grade(mudblood, "horocruxes")); //Hermione recieves a perfect score on horocruxes. Ironic Right?
+console.log(awesome.listSubjects()); // Comes back Undefined
+console.log(mudblood.PRAssignment(mudblood, "Potions")); // Hermione has submittd a PR for Potions.
+console.log(awesome.sprintChallenge("JavaScript")); // Brittany has begun the sprint challenge on JavaScript
+console.log(elon.debugsCode(awesome, "Python")); //Elon Musk debugs Brittany's code on Python.
